@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+
+<body>
+    <h3>Faça um formulário onde o usuário possa escolher sua pizza, contendo as
+        seguintes informações: nome do cliente, telefone, endereço, sabores (sem
+        limitação), borda e um campo para observações da entrega;</h3>
+
+    <h2>Peça a sua Pizza!</h2>
+
+    <form>
+        <label for="nome">Digite o seu nome: </label>
+        <input type="text" id="nome" name="nome" required pattern="[a-zA-Z\s]+$" placeholder="Exemplo: Maria"
+            title="Insira seu nome sem números ou caracteres especiais"> <br>
+
+        <label for="tel">Digite o seu número de telefone:</label>
+        <input type="tel" name="tel" id="tel" required pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"
+            placeholder="Exemplo: (99) 9999-9999" title="Número de telefone precisa ser no formato (99) 9999-9999"> <br>
+
+        <label for="endereco"> Digite o seu endereço:</label>
+        <input type="text" name="endereco" id="endereco" required pattern="[a-zA-Z0-9\s,.-]+$"
+            placeholder="Exemplo: Rua Lindo, 123, Bairro Belo" size="40"> <br>
+
+        <label for="saborPizza"> Digite o sabor da sua pizza:</label>
+        <input type="text" name="saborPizza" id="saborPizza" required pattern="[a-zA-Z0-9\s,.-]+$"
+            placeholder="Exemplo: calabresa"> <br>
+
+        <p>Deseja que tenha borda?</p>
+        <input type="radio" name="borda" id="comBorda" value="comBorda" checked>
+        <label for="comBorda">Sim, com borda</label>
+        <input type="radio" name="borda" id="semBorda" value="semBorda">
+        <label for="semBorda">Não, sem borda</label>
+
+        <br>
+
+        <label for="mensagem">Observações na entrega?</label> <br>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Escreva as suas observações."></textarea> <br>
+
+        <button type="submit">Envie o seu pedido!</button>
+    </form>
+</body>
+
+</html>
